@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace Personel_Kayit
 {
-    public partial class Form1 : Form
+    public partial class FrmAnaForm : Form
     {
-        public Form1()
+        public FrmAnaForm()
         {
             InitializeComponent();
         }
@@ -45,12 +45,12 @@ namespace Personel_Kayit
         private void Form1_Load(object sender, EventArgs e)
         {
 
+           
         }
 
         private void btnListele_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'personelVeriTabaniDataSet.Tbl_Personel' table. You can move, or remove it, as needed.
-            this.tbl_PersonelTableAdapter.Fill(this.personelVeriTabaniDataSet.Tbl_Personel);
 
          }
 
@@ -155,6 +155,24 @@ namespace Personel_Kayit
 
             baglanti.Close();
             MessageBox.Show("Güncellendi");
+        }
+
+        private void btnIstatislik_Click(object sender, EventArgs e)
+        {
+            Frmistatistik fr = new Frmistatistik();
+            fr.Show();
+        }
+
+        private void btnGrafikler_Click(object sender, EventArgs e)
+        {
+            FrmGrafikler frg = new FrmGrafikler();
+            frg.Show();
+        }
+
+        private void btnRaporlar_Click(object sender, EventArgs e)
+        {
+            //FrmRaporlar frr = new FrmRaporlar();
+            //frr.Show();
         }
     }
 }

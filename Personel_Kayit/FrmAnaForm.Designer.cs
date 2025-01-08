@@ -1,6 +1,6 @@
 ﻿namespace Personel_Kayit
 {
-    partial class Form1
+    partial class FrmAnaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbBxSehir = new System.Windows.Forms.ComboBox();
             this.mskTxtMaas = new System.Windows.Forms.MaskedTextBox();
@@ -47,6 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnRaporlar = new System.Windows.Forms.Button();
             this.btnGrafikler = new System.Windows.Forms.Button();
             this.btnIstatislik = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
@@ -64,16 +65,16 @@
             this.perMeslekDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.durumDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tblPersonelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personelVeriTabaniDataSet = new Personel_Kayit.PersonelVeriTabaniDataSet();
+            //this.personelVeriTabaniDataSet = new Personel_Kayit.PersonelVeriTabaniDataSet();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tbl_PersonelTableAdapter = new Personel_Kayit.PersonelVeriTabaniDataSetTableAdapters.Tbl_PersonelTableAdapter();
+            //this.tbl_PersonelTableAdapter = new Personel_Kayit.PersonelVeriTabaniDataSetTableAdapters.Tbl_PersonelTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblPersonelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personelVeriTabaniDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)/*(this.personelVeriTabaniDataSet)).BeginInit();
+           ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -247,6 +248,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnRaporlar);
             this.groupBox2.Controls.Add(this.btnGrafikler);
             this.groupBox2.Controls.Add(this.btnIstatislik);
             this.groupBox2.Controls.Add(this.btnTemizle);
@@ -263,27 +265,39 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İşlemler";
             // 
+            // btnRaporlar
+            // 
+            this.btnRaporlar.Location = new System.Drawing.Point(76, 413);
+            this.btnRaporlar.Name = "btnRaporlar";
+            this.btnRaporlar.Size = new System.Drawing.Size(177, 44);
+            this.btnRaporlar.TabIndex = 7;
+            this.btnRaporlar.Text = "Raporlar";
+            this.btnRaporlar.UseVisualStyleBackColor = true;
+            this.btnRaporlar.Click += new System.EventHandler(this.btnRaporlar_Click);
+            // 
             // btnGrafikler
             // 
-            this.btnGrafikler.Location = new System.Drawing.Point(76, 363);
+            this.btnGrafikler.Location = new System.Drawing.Point(76, 347);
             this.btnGrafikler.Name = "btnGrafikler";
             this.btnGrafikler.Size = new System.Drawing.Size(177, 44);
             this.btnGrafikler.TabIndex = 6;
             this.btnGrafikler.Text = "Grafikler";
             this.btnGrafikler.UseVisualStyleBackColor = true;
+            this.btnGrafikler.Click += new System.EventHandler(this.btnGrafikler_Click);
             // 
             // btnIstatislik
             // 
-            this.btnIstatislik.Location = new System.Drawing.Point(76, 307);
+            this.btnIstatislik.Location = new System.Drawing.Point(76, 291);
             this.btnIstatislik.Name = "btnIstatislik";
             this.btnIstatislik.Size = new System.Drawing.Size(177, 40);
             this.btnIstatislik.TabIndex = 5;
             this.btnIstatislik.Text = "İstatislik";
             this.btnIstatislik.UseVisualStyleBackColor = true;
+            this.btnIstatislik.Click += new System.EventHandler(this.btnIstatislik_Click);
             // 
             // btnTemizle
             // 
-            this.btnTemizle.Location = new System.Drawing.Point(76, 253);
+            this.btnTemizle.Location = new System.Drawing.Point(76, 237);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(177, 36);
             this.btnTemizle.TabIndex = 4;
@@ -293,7 +307,7 @@
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(76, 197);
+            this.btnGuncelle.Location = new System.Drawing.Point(76, 181);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(177, 36);
             this.btnGuncelle.TabIndex = 3;
@@ -303,7 +317,7 @@
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(76, 144);
+            this.btnSil.Location = new System.Drawing.Point(76, 128);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(177, 34);
             this.btnSil.TabIndex = 2;
@@ -313,7 +327,7 @@
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(76, 93);
+            this.btnKaydet.Location = new System.Drawing.Point(76, 77);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(177, 36);
             this.btnKaydet.TabIndex = 1;
@@ -323,7 +337,7 @@
             // 
             // btnListele
             // 
-            this.btnListele.Location = new System.Drawing.Point(76, 41);
+            this.btnListele.Location = new System.Drawing.Point(76, 25);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(177, 40);
             this.btnListele.TabIndex = 0;
@@ -423,15 +437,15 @@
             this.durumDataGridViewCheckBoxColumn.Name = "durumDataGridViewCheckBoxColumn";
             this.durumDataGridViewCheckBoxColumn.Width = 125;
             // 
-            // tblPersonelBindingSource
-            // 
-            this.tblPersonelBindingSource.DataMember = "Tbl_Personel";
-            this.tblPersonelBindingSource.DataSource = this.personelVeriTabaniDataSet;
-            // 
-            // personelVeriTabaniDataSet
-            // 
-            this.personelVeriTabaniDataSet.DataSetName = "PersonelVeriTabaniDataSet";
-            this.personelVeriTabaniDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //// tblPersonelBindingSource
+            //// 
+            //this.tblPersonelBindingSource.DataMember = "Tbl_Personel";
+            //this.tblPersonelBindingSource.DataSource = this.personelVeriTabaniDataSet;
+            //// 
+            //// personelVeriTabaniDataSet
+            //// 
+            //this.personelVeriTabaniDataSet.DataSetName = "PersonelVeriTabaniDataSet";
+            //this.personelVeriTabaniDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pictureBox1
             // 
@@ -443,11 +457,11 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // tbl_PersonelTableAdapter
+            //// tbl_PersonelTableAdapter
+            //// 
+            //this.tbl_PersonelTableAdapter.ClearBeforeFill = true;
             // 
-            this.tbl_PersonelTableAdapter.ClearBeforeFill = true;
-            // 
-            // Form1
+            // FrmAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -459,7 +473,7 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "Form1";
+            this.Name = "FrmAnaForm";
             this.Text = "Personel Kayıt";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -468,7 +482,7 @@
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblPersonelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personelVeriTabaniDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.personelVeriTabaniDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -503,9 +517,9 @@
         private System.Windows.Forms.Button btnGrafikler;
         private System.Windows.Forms.Button btnIstatislik;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private PersonelVeriTabaniDataSet personelVeriTabaniDataSet;
+        //private PersonelVeriTabaniDataSet personelVeriTabaniDataSet;
         private System.Windows.Forms.BindingSource tblPersonelBindingSource;
-        private PersonelVeriTabaniDataSetTableAdapters.Tbl_PersonelTableAdapter tbl_PersonelTableAdapter;
+/*        private PersonelVeriTabaniDataSetTableAdapters.Tbl_PersonelTableAdapter *//*tbl_PersonelTableAdapter;*/
         private System.Windows.Forms.DataGridViewTextBoxColumn perIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn perAdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn perSoyadDataGridViewTextBoxColumn;
@@ -513,6 +527,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn perMaasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn perMeslekDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn durumDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button btnRaporlar;
     }
 }
 
